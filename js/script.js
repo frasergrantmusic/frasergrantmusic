@@ -14,7 +14,6 @@
 ------------------------------------------------------------- */
 
 const BOOKING_LINKS = {
-  "consultation": "https://cal.com/frasergrantmusic/15-minute-lesson-consultation",
   "lesson-30":    "https://cal.com/frasergrantmusic/30-minute-lesson",
   "lesson-60":    "https://cal.com/frasergrantmusic/60-minute-lesson",
   "lesson-90":    "https://cal.com/frasergrantmusic/90-minute-lesson",
@@ -48,6 +47,22 @@ document.querySelectorAll(".booking-link").forEach(function (link) {
     link.title = "Booking link not set up yet";
   }
 });
+
+// "Book a Free Call" jumps to the contact form and pre-selects
+// Free Consultation, so the enquiry arrives already labelled.
+var consultCta = document.getElementById("consultCta");
+if (consultCta) {
+  consultCta.addEventListener("click", function () {
+    var interest = document.getElementById("interest");
+    if (!interest) return;
+    for (var i = 0; i < interest.options.length; i++) {
+      if (interest.options[i].text.indexOf("Free Consultation") === 0) {
+        interest.selectedIndex = i;
+        break;
+      }
+    }
+  });
+}
 
 // Instagram
 var instaLink = document.getElementById("instagramLink");
