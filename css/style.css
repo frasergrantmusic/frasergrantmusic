@@ -790,3 +790,15 @@ section { padding: 96px 0; }
   .consult-banner .btn { width: 100%; justify-content: center; }
   .pricing-head { margin-top: 44px; }
 }
+
+/* ----- "Prices start at" line under a section heading ----- */
+
+.from-price {
+  font-family: var(--font-head);
+  font-size: 1.28rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: -4px 0 20px;
+  font-variant-numeric: tabular-nums;
+}
+.dark-section .from-price { color: var(--gold-light); }
