@@ -516,3 +516,277 @@ section { padding: 96px 0; }
   .gallery-strip { grid-template-columns: repeat(2, 1fr); }
   .credibility { flex-direction: column; align-items: flex-start; }
 }
+
+/* ===================================================================
+   Lessons pricing, testimonials, studio gear, credits
+   =================================================================== */
+
+/* ----- Free consultation banner ----- */
+
+.consult-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  background: rgba(182, 137, 63, 0.12);
+  border: 1px solid rgba(182, 137, 63, 0.35);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin-top: 56px;
+}
+.consult-text h3 { font-size: 1.3rem; margin-bottom: 4px; }
+.consult-text p { color: var(--ink-soft); margin: 0; font-size: 0.97rem; }
+
+/* ----- Pricing headings ----- */
+
+.pricing-head {
+  font-size: 1.35rem;
+  margin: 56px 0 6px;
+}
+.pricing-sub {
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  margin: 0 0 26px;
+  max-width: 60ch;
+}
+.pricing-head + .price-grid { margin-top: 24px; }
+
+/* ----- Single lesson cards ----- */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.price-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.price-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(42, 36, 32, 0.09);
+}
+
+.price-duration {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.price-amount {
+  font-family: var(--font-head);
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.price-card .btn { margin-top: 14px; width: 100%; justify-content: center; }
+
+/* ----- Package cards ----- */
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.package-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.package-card p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 4px 0 0;
+  flex-grow: 1;
+}
+.package-card .btn { margin-top: 20px; }
+
+.package-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.package-head h4 { font-size: 1.15rem; margin: 0; }
+
+.package-save {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7d5718;
+  background: rgba(182, 137, 63, 0.18);
+  border-radius: 3px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+
+/* ----- Testimonials ----- */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 30px 28px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.testimonial p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  font-style: italic;
+  flex-grow: 1;
+}
+.testimonial p::before { content: "\201C"; }
+.testimonial p::after  { content: "\201D"; }
+
+.testimonial cite {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ----- Studio gear strip ----- */
+
+.gear-strip {
+  margin-top: 56px;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+}
+.gear-strip h4 {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.gear-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+.gear-list li {
+  font-size: 0.97rem;
+  color: var(--ink-soft);
+  position: relative;
+  padding-left: 18px;
+}
+.gear-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.65em;
+  width: 9px; height: 1px;
+  background: var(--gold);
+}
+
+/* ----- Genre tags ----- */
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 30px;
+}
+.tag {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: rgba(42, 36, 32, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 5px 14px;
+}
+
+/* ----- Selected credits ----- */
+
+.credits-block {
+  margin-top: 56px;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+}
+.credits-block h4 {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.credits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 28px;
+}
+.credits-list li {
+  font-family: var(--font-head);
+  font-size: 1.12rem;
+  color: var(--ink);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.credits-list li span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 3px;
+}
+
+/* ----- Responsive for the above ----- */
+
+@media (max-width: 900px) {
+  .price-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .credits-list { grid-template-columns: repeat(2, 1fr); }
+  .consult-banner { padding: 24px; }
+}
+
+@media (max-width: 720px) {
+  .price-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .package-grid { grid-template-columns: 1fr; }
+  .credits-list { grid-template-columns: 1fr; }
+  .consult-banner { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .consult-banner .btn { width: 100%; justify-content: center; }
+  .pricing-head { margin-top: 44px; }
+}
