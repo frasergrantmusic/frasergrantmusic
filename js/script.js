@@ -14,11 +14,11 @@
 ------------------------------------------------------------- */
 
 const BOOKING_LINKS = {
-  "consultation": "https://YOUR-BOOKING-LINK-HERE/free-consultation",
-  "lesson-30":    "https://YOUR-BOOKING-LINK-HERE/30-minute-lesson",
-  "lesson-60":    "https://YOUR-BOOKING-LINK-HERE/1-hour-lesson",
-  "lesson-90":    "https://YOUR-BOOKING-LINK-HERE/90-minute-lesson",
-  "lesson-120":   "https://YOUR-BOOKING-LINK-HERE/2-hour-lesson"
+  "consultation": "https://cal.com/frasergrantmusic/15-minute-lesson-consultation",
+  "lesson-30":    "https://cal.com/frasergrantmusic/30-minute-lesson",
+  "lesson-60":    "https://cal.com/frasergrantmusic/60-minute-lesson",
+  "lesson-90":    "https://cal.com/frasergrantmusic/90-minute-lesson",
+  "lesson-120":   "https://cal.com/frasergrantmusic/120-minute-lesson"
 };
 
 
