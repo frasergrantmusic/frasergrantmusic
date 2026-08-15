@@ -96,5 +96,24 @@ navLinks.querySelectorAll("a").forEach(function (link) {
   });
 });
 
+// Video: swap the thumbnail for the real player only when clicked.
+// Keeps the page fast, and means YouTube can't track visitors who never press play.
+document.querySelectorAll(".video-embed").forEach(function (box) {
+  box.addEventListener("click", function () {
+    var id = box.getAttribute("data-video");
+    if (!id || box.querySelector("iframe")) return;
+
+    var frame = document.createElement("iframe");
+    frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+    frame.title = box.getAttribute("data-title") || "Video";
+    frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    frame.allowFullscreen = true;
+
+    box.innerHTML = "";
+    box.appendChild(frame);
+    box.style.cursor = "default";
+  });
+});
+
 // Copyright year, updates itself every January
 document.getElementById("year").textContent = new Date().getFullYear();

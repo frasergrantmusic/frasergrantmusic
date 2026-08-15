@@ -295,7 +295,18 @@
   <div class="container">
     <div class="split">
       <div class="split-media">
-        <img src="images/bass-session.jpg" alt="Fraser Grant recording bass in the studio">
+        <!-- Video loads only when clicked, so it never slows the page down.
+             To change it later, swap the id in data-video and the src below. -->
+        <div class="video-embed" data-video="0xQ4x0hVarM" data-title="Come On, Come On Over — Bass Cover">
+          <img class="video-thumb" src="https://i.ytimg.com/vi/0xQ4x0hVarM/hqdefault.jpg"
+               alt="Fraser Grant playing bass — Come On, Come On Over" loading="lazy">
+          <button class="video-play" type="button" aria-label="Play video: Come On, Come On Over — Bass Cover">
+            <svg viewBox="0 0 68 48" aria-hidden="true" focusable="false">
+              <path class="yt-bg" d="M66.5 7.7c-.8-2.9-2.5-5.2-5.4-6C55.8.2 34 .2 34 .2S12.2.2 6.9 1.7C4 2.5 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.5 5.2 5.4 6C12.2 47.8 34 47.8 34 47.8s21.8 0 27.1-1.5c2.9-.8 4.6-3.1 5.4-6C68 35 68 24 68 24s0-11-1.5-16.3z"/>
+              <path class="yt-arrow" d="M45 24 27 14v20"/>
+            </svg>
+          </button>
+        </div>
       </div>
       <div class="split-text">
         <span class="eyebrow">Session Work</span>
