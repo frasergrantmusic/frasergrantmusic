@@ -859,3 +859,89 @@ section { padding: 96px 0; }
   height: 100%;
   border: 0;
 }
+
+/* ----- Band booking tiers (sits on the dark section) ----- */
+
+.tiers-head { margin-top: 64px; }
+.dark-section .pricing-head { color: var(--cream); }
+
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.tier-card {
+  position: relative;
+  background: rgba(246, 241, 232, 0.045);
+  border: 1px solid var(--line-dark);
+  border-radius: 6px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+.tier-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(209, 171, 106, 0.55);
+  background: rgba(246, 241, 232, 0.07);
+}
+
+.tier-card h4 {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  color: var(--cream);
+  margin: 0;
+}
+
+.tier-price {
+  font-family: var(--font-head);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 4px;
+}
+.tier-price span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(246, 241, 232, 0.5);
+  margin-right: 4px;
+  vertical-align: 3px;
+}
+
+.tier-card p {
+  color: rgba(246, 241, 232, 0.75);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* the middle tier gets a little emphasis */
+.tier-featured {
+  border-color: rgba(209, 171, 106, 0.45);
+  background: rgba(209, 171, 106, 0.07);
+}
+.tier-flag {
+  position: absolute;
+  top: -10px;
+  left: 26px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--walnut-deep);
+  background: var(--gold);
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+
+@media (max-width: 900px) {
+  .tier-grid { grid-template-columns: 1fr; gap: 16px; }
+  .tiers-head { margin-top: 48px; }
+}
