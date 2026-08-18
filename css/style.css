@@ -945,3 +945,37 @@ section { padding: 96px 0; }
   .tier-grid { grid-template-columns: 1fr; gap: 16px; }
   .tiers-head { margin-top: 48px; }
 }
+
+/* ----- Band section: strapline, what's included, add-ons ----- */
+
+.band-strap {
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(246, 241, 232, 0.62);
+  margin: -6px 0 20px;
+}
+
+.included-head {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin: 26px 0 14px;
+}
+
+.addon-line {
+  font-size: 0.92rem;
+  color: rgba(246, 241, 232, 0.72);
+  border-top: 1px solid var(--line-dark);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+.addon-line span {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  color: var(--gold-light);
+  margin-right: 6px;
+}
