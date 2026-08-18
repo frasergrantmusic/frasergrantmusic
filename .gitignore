@@ -1,1 +1,10 @@
+# Mac clutter
 .DS_Store
+
+# Never publish client documents, quotes or contracts.
+# Anything in this folder goes public, so these stay out by default.
+*.pdf
+*.docx
+*.xlsx
+*.pages
+*.numbers
